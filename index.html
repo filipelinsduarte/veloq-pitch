@@ -9,130 +9,181 @@
 
 :root {
   --g: #10b981;
+  --g-mid: #059669;
   --g-light: #d1fae5;
   --navy: #0d2137;
   --navy2: #1a3a52;
   --bg: #ffffff;
   --bg2: #f8fafc;
+  --bg3: #f1f5f9;
   --text: #334155;
   --muted: #94a3b8;
   --border: #e2e8f0;
   --red: #ef4444;
-  --red-light: #fee2e2;
-  --yellow: #f59e0b;
+  --red-bg: #fef2f2;
+  --red-border: #fecaca;
 }
 
 .reveal-viewport { background: var(--bg); }
-.reveal .slides { font-family: "Helvetica Neue", -apple-system, sans-serif; color: var(--text); }
+.reveal .slides { font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); }
 
 .reveal .slides section {
   text-align: left;
-  padding: 44px 64px;
+  padding: 42px 60px 36px;
   height: 100%;
   overflow: hidden;
   background: var(--bg);
-  color: var(--text);
 }
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
   font-family: "Helvetica Neue", -apple-system, sans-serif;
-  font-weight: 700;
-  letter-spacing: -.02em;
+  font-weight: 800;
+  letter-spacing: -.025em;
   text-transform: none;
   color: var(--navy);
-  line-height: 1.2;
+  line-height: 1.15;
   margin: 0;
 }
 
-.eyebrow {
-  display: inline-block;
-  font-size: .52em;
-  font-weight: 700;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-  color: var(--g);
-  background: var(--g-light);
-  padding: 3px 10px;
-  border-radius: 100px;
-  margin-bottom: 14px;
+/* ── TOPBAR ── */
+.topbar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--g), #34d399);
 }
 
+/* ── EYEBROW ── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .58em;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--g-mid);
+  background: var(--g-light);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+/* ── CONTROLS ── */
 .reveal .progress { color: var(--g); height: 2px; }
-.reveal .controls { color: var(--navy2); }
+.reveal .controls button { color: var(--navy2) !important; }
 .reveal .slide-number { color: var(--muted); font-size: .5em; background: none; }
 
-/* ── TITLE ── */
-.reveal h1 { font-size: 2.4em; color: var(--navy); }
+/* ════════════════════
+   SLIDE 1 — TITLE
+════════════════════ */
+.reveal h1 { font-size: 2.6em; }
 .reveal h1 span { color: var(--g); }
-.sub { color: var(--text); font-size: .72em; line-height: 1.7; margin-top: 14px; max-width: 480px; }
-.meta { display: flex; gap: 24px; margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--border); font-size: .58em; color: var(--muted); }
-.title-bar { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--g), #34d399); }
+.title-sub { color: var(--text); font-size: .78em; line-height: 1.7; margin-top: 16px; max-width: 500px; }
+.title-meta {
+  display: flex; gap: 20px; flex-wrap: wrap;
+  margin-top: 32px; padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: .62em; color: var(--muted);
+}
+.title-meta span { display: flex; align-items: center; gap: 5px; }
 
-/* ── HEADINGS ── */
-.reveal h2 { font-size: 1.65em; margin-bottom: 24px; color: var(--navy); }
+/* ════════════════════
+   SLIDE 2 — GAP
+════════════════════ */
+.reveal h2 { font-size: 1.75em; margin-bottom: 26px; }
 .reveal h2 span { color: var(--g); }
 
-/* ── UTILITY ── */
-.pill { display: inline-block; border-radius: 100px; padding: 2px 9px; font-size: .62em; font-weight: 700; }
-.pill.r { background: var(--red-light); color: var(--red); }
-.pill.g { background: var(--g-light); color: #059669; }
-
-/* ── GAP SLIDE ── */
 .gap-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .gap-card {
-  border-radius: 10px;
-  padding: 16px 12px;
+  border-radius: 12px;
+  padding: 18px 12px 14px;
   text-align: center;
   border: 1px solid var(--border);
   background: var(--bg2);
+  position: relative;
 }
 .gap-card.veloq {
-  background: var(--red-light);
-  border-color: #fca5a5;
+  background: var(--red-bg);
+  border-color: var(--red-border);
+  box-shadow: 0 0 0 1px var(--red-border);
+}
+.gap-card .logo {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  object-fit: contain;
+  margin: 0 auto 8px;
+  display: block;
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 2px;
 }
 .gap-card .num {
-  font-size: 1.8em;
+  font-size: 1.9em;
   font-weight: 900;
   line-height: 1;
   color: var(--navy);
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 .gap-card.veloq .num { color: var(--red); }
 .gap-card .name {
   font-size: .58em;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: .07em;
   font-weight: 700;
 }
+.gap-card .tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: .52em;
+  font-weight: 700;
+  background: var(--red-bg);
+  color: var(--red);
+  border: 1px solid var(--red-border);
+  border-radius: 100px;
+  padding: 1px 7px;
+}
+
 .gap-note {
-  padding: 12px 16px;
-  border-radius: 8px;
+  padding: 13px 18px;
+  border-radius: 10px;
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--red);
-  font-size: .68em;
+  border-left: 4px solid var(--red);
+  font-size: .7em;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 .gap-note strong { color: var(--navy); }
 
-/* ── SERP ── */
-.serp-wrap { display: flex; flex-direction: column; gap: 14px; }
+/* ════════════════════
+   SLIDE 3 — SERP
+════════════════════ */
+.serp-wrap { display: flex; flex-direction: column; gap: 16px; }
 .kw-label {
-  font-size: .56em;
+  font-size: .6em;
   font-weight: 800;
-  letter-spacing: .08em;
+  letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--navy2);
-  margin-bottom: 6px;
-  display: block;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.kw-label::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 14px;
+  background: var(--g);
+  border-radius: 2px;
 }
 .serp-row {
   display: grid;
@@ -142,27 +193,42 @@
 .serp-chip {
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 7px 8px;
-  font-size: .6em;
+  border-radius: 8px;
+  padding: 8px 6px;
+  font-size: .63em;
   color: var(--text);
   font-weight: 600;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.serp-chip img {
+  width: 20px; height: 20px;
+  border-radius: 4px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 1px;
 }
 .serp-chip.absent {
-  background: var(--red-light);
-  border-color: #fca5a5;
+  background: var(--red-bg);
+  border-color: var(--red-border);
   color: var(--red);
+  font-weight: 700;
 }
 
-/* ── SCHEMA ── */
+/* ════════════════════
+   SLIDE 4 — SCHEMA
+════════════════════ */
 .schema-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 18px;
 }
 .schema-col-title {
-  font-size: .58em;
+  font-size: .6em;
   font-weight: 800;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -170,216 +236,237 @@
   display: block;
 }
 .schema-col-title.bad { color: var(--red); }
-.schema-col-title.good { color: #059669; }
+.schema-col-title.good { color: var(--g-mid); }
+
 .schema-item {
   display: flex;
   gap: 10px;
-  padding: 9px 12px;
-  border-radius: 8px;
-  margin-bottom: 7px;
-  font-size: .67em;
+  padding: 10px 13px;
+  border-radius: 9px;
+  margin-bottom: 8px;
+  font-size: .68em;
   line-height: 1.5;
   align-items: flex-start;
 }
-.schema-item.bad { background: var(--red-light); border: 1px solid #fca5a5; }
-.schema-item.good { background: var(--g-light); border: 1px solid #6ee7b7; }
-.schema-item .icon { flex-shrink: 0; }
-.schema-item strong { color: var(--navy); display: block; }
-.schema-item span { color: var(--text); }
+.schema-item.bad { background: var(--red-bg); border: 1px solid var(--red-border); }
+.schema-item.good { background: var(--g-light); border: 1px solid #a7f3d0; }
+.schema-item .icon { flex-shrink: 0; font-size: 1.1em; line-height: 1.4; }
+.schema-item strong { color: var(--navy); display: block; margin-bottom: 2px; }
+.schema-item span { color: var(--text); font-size: .93em; }
+
 .schema-note {
   margin-top: 14px;
-  padding: 10px 14px;
-  border-radius: 8px;
+  padding: 11px 16px;
+  border-radius: 9px;
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--g);
-  font-size: .65em;
+  border-left: 4px solid var(--g);
+  font-size: .67em;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
 }
-.schema-note strong { color: #059669; }
+.schema-note strong { color: var(--g-mid); }
 
-/* ── MOAT ── */
+/* ════════════════════
+   SLIDE 5 — MOAT
+════════════════════ */
 .moat-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+  margin-bottom: 14px;
 }
 .moat-card {
   padding: 16px 18px;
-  border-radius: 10px;
+  border-radius: 12px;
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-top: 3px solid var(--g);
+  position: relative;
+  overflow: hidden;
 }
-.moat-card .icon { font-size: 1.2em; margin-bottom: 6px; display: block; }
-.moat-card h3 { font-size: .75em; color: var(--navy); margin-bottom: 5px; }
+.moat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--g), #34d399);
+}
+.moat-card .icon { font-size: 1.3em; margin-bottom: 7px; display: block; }
+.moat-card h3 { font-size: .76em; color: var(--navy); margin-bottom: 5px; }
 .moat-card p { font-size: .65em; color: var(--text); line-height: 1.55; }
-.moat-callout {
-  margin-top: 14px;
-  padding: 11px 16px;
-  border-radius: 8px;
-  background: var(--g-light);
-  border: 1px solid #6ee7b7;
-  font-size: .67em;
-  color: #065f46;
-  line-height: 1.6;
-}
-.moat-callout strong { color: #064e3b; }
 
-/* ── CLOSE ── */
-.close-body { max-width: 520px; }
-.close-body p { font-size: .72em; color: var(--text); line-height: 1.75; margin-top: 10px; }
+.moat-callout {
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: var(--g-light);
+  border: 1px solid #a7f3d0;
+  font-size: .69em;
+  color: #065f46;
+  line-height: 1.65;
+}
+.moat-callout strong { color: #064e3b; font-weight: 800; }
+
+/* ════════════════════
+   SLIDE 6 — CLOSE
+════════════════════ */
+.close-body p { font-size: .74em; color: var(--text); line-height: 1.75; margin-top: 10px; max-width: 540px; }
+
 .close-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 30px;
 }
 .close-card {
-  padding: 18px 20px;
-  border-radius: 10px;
+  padding: 20px 22px;
+  border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--bg2);
 }
-.close-card h3 { font-size: .75em; color: var(--navy); margin-bottom: 5px; }
-.close-card p { font-size: .65em; color: var(--text); line-height: 1.55; }
-.close-card a { color: var(--g); text-decoration: none; font-weight: 600; }
+.close-card h3 { font-size: .78em; color: var(--navy); margin-bottom: 6px; }
+.close-card p { font-size: .67em; color: var(--text); line-height: 1.6; }
+.close-card a { color: var(--g); text-decoration: none; font-weight: 700; }
 </style>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 
-<!-- 1 · TITLE -->
+<!-- ══ 1 · TITLE ══ -->
 <section>
-  <div class="title-bar"></div>
+  <div class="topbar"></div>
   <span class="eyebrow">SEO Strategy · March 2026</span>
   <h1>Growing Veloq's<br><span>Organic Presence</span></h1>
-  <p class="sub">What's holding Veloq back from ranking — and the clearest path forward.</p>
-  <div class="meta">
-    <span>Filipe Lins Duarte</span>
-    <span>For Konstantin · Veloq / Rohlik Group</span>
-    <span>March 2026</span>
+  <p class="title-sub">What's holding Veloq back from ranking — and the clearest path forward.</p>
+  <div class="title-meta">
+    <span>✍️ Filipe Lins Duarte</span>
+    <span>🎯 For Konstantin · Veloq / Rohlik Group</span>
+    <span>📅 March 2026</span>
   </div>
 </section>
 
-<!-- 2 · CORE PROBLEM -->
+<!-- ══ 2 · CORE PROBLEM ══ -->
 <section>
-  <div class="title-bar"></div>
+  <div class="topbar"></div>
   <span class="eyebrow">The Core Problem</span>
   <h2>Veloq has <span>17 pages.</span><br>Competitors have thousands.</h2>
   <div class="gap-grid">
     <div class="gap-card veloq">
+      <img class="logo" src="https://www.google.com/s2/favicons?domain=veloq.com&sz=64" alt="Veloq">
       <span class="num">17</span>
       <span class="name">Veloq</span>
+      <span class="tag">↓ 276x less</span>
     </div>
     <div class="gap-card">
+      <img class="logo" src="https://www.google.com/s2/favicons?domain=ocadogroup.com&sz=64" alt="Ocado">
       <span class="num">278</span>
       <span class="name">Ocado</span>
     </div>
     <div class="gap-card">
+      <img class="logo" src="https://www.google.com/s2/favicons?domain=exotec.com&sz=64" alt="Exotec">
       <span class="num">1,178</span>
       <span class="name">Exotec</span>
     </div>
     <div class="gap-card">
+      <img class="logo" src="https://www.google.com/s2/favicons?domain=knapp.com&sz=64" alt="KNAPP">
       <span class="num">2,737</span>
       <span class="name">KNAPP</span>
     </div>
     <div class="gap-card">
+      <img class="logo" src="https://www.google.com/s2/favicons?domain=autostoresystem.com&sz=64" alt="AutoStore">
       <span class="num">4,699</span>
       <span class="name">AutoStore</span>
     </div>
   </div>
   <div class="gap-note">
-    Google has almost nothing from Veloq to crawl, index, or rank. This isn't a technical SEO problem — <strong>it's a content volume problem.</strong> Fix this, and everything else follows.
+    Google has almost nothing from Veloq to crawl, index, or rank. This isn't a technical SEO problem — <strong>it's a content volume problem.</strong> Fix the content, and everything else follows.
   </div>
 </section>
 
-<!-- 3 · INVISIBLE -->
+<!-- ══ 3 · INVISIBLE ══ -->
 <section>
-  <div class="title-bar"></div>
+  <div class="topbar"></div>
   <span class="eyebrow">The Consequence</span>
   <h2>Veloq doesn't appear for<br><span>its own keywords.</span></h2>
   <div class="serp-wrap">
     <div>
-      <span class="kw-label">grocery warehouse automation</span>
+      <div class="kw-label">grocery warehouse automation</div>
       <div class="serp-row">
-        <div class="serp-chip">Hai Robotics</div>
-        <div class="serp-chip">Fulfil.com</div>
-        <div class="serp-chip">Exotec</div>
-        <div class="serp-chip">Dematic</div>
-        <div class="serp-chip absent">Veloq — not ranking</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=hairobotics.com&sz=64" alt="">Hai Robotics</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=fulfil.com&sz=64" alt="">Fulfil.com</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=exotec.com&sz=64" alt="">Exotec</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=dematic.com&sz=64" alt="">Dematic</div>
+        <div class="serp-chip absent">✗ Veloq not ranking</div>
       </div>
     </div>
     <div>
-      <span class="kw-label">grocery fulfilment centres</span>
+      <div class="kw-label">grocery fulfilment centres</div>
       <div class="serp-row">
-        <div class="serp-chip">KNAPP</div>
-        <div class="serp-chip">Amazon / WFM</div>
-        <div class="serp-chip">Dematic</div>
-        <div class="serp-chip">Hai Robotics</div>
-        <div class="serp-chip absent">Veloq — not ranking</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=knapp.com&sz=64" alt="">KNAPP</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=amazon.com&sz=64" alt="">Amazon / WFM</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=dematic.com&sz=64" alt="">Dematic</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=hairobotics.com&sz=64" alt="">Hai Robotics</div>
+        <div class="serp-chip absent">✗ Veloq not ranking</div>
       </div>
     </div>
     <div>
-      <span class="kw-label">grocery warehouse automation software</span>
+      <div class="kw-label">grocery warehouse automation software</div>
       <div class="serp-row">
-        <div class="serp-chip">Dematic</div>
-        <div class="serp-chip">Hai Robotics</div>
-        <div class="serp-chip">AutoStore</div>
-        <div class="serp-chip">Exotec</div>
-        <div class="serp-chip absent">Veloq — not ranking</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=dematic.com&sz=64" alt="">Dematic</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=hairobotics.com&sz=64" alt="">Hai Robotics</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=autostoresystem.com&sz=64" alt="">AutoStore</div>
+        <div class="serp-chip"><img src="https://www.google.com/s2/favicons?domain=exotec.com&sz=64" alt="">Exotec</div>
+        <div class="serp-chip absent">✗ Veloq not ranking</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4 · SCHEMA QUICK WIN -->
+<!-- ══ 4 · SCHEMA ══ -->
 <section>
-  <div class="title-bar"></div>
+  <div class="topbar"></div>
   <span class="eyebrow">Quick Win</span>
   <h2>Schema markup is<br><span>generic across the site.</span></h2>
   <div class="schema-grid">
     <div>
-      <span class="schema-col-title bad">What's there now</span>
+      <span class="schema-col-title bad">❌ What's there now</span>
       <div class="schema-item bad">
-        <span class="icon">❌</span>
-        <div><strong>WebPage on every product page</strong><span>The most basic type — tells Google nothing about what Veloq does.</span></div>
+        <span class="icon">🔴</span>
+        <div><strong>WebPage on every product page</strong><span>The most basic type — tells Google nothing about what Veloq does or sells.</span></div>
       </div>
       <div class="schema-item bad">
-        <span class="icon">❌</span>
+        <span class="icon">🔴</span>
         <div><strong>No BreadcrumbList</strong><span>Google can't display clean URL paths in search results.</span></div>
       </div>
       <div class="schema-item bad">
-        <span class="icon">❌</span>
-        <div><strong>No FAQPage schema</strong><span>Missed opportunity for rich result accordions in SERPs.</span></div>
+        <span class="icon">🔴</span>
+        <div><strong>No FAQPage schema</strong><span>Missing the chance for accordion-style rich results in SERPs.</span></div>
       </div>
     </div>
     <div>
-      <span class="schema-col-title good">What it should be</span>
+      <span class="schema-col-title good">✅ What it should be</span>
       <div class="schema-item good">
-        <span class="icon">✅</span>
-        <div><strong>SoftwareApplication</strong><span>Declares Veloq as a B2B platform with category and feature signals.</span></div>
+        <span class="icon">🟢</span>
+        <div><strong>SoftwareApplication</strong><span>Declares Veloq as a B2B platform — category, features, and pricing signals.</span></div>
       </div>
       <div class="schema-item good">
-        <span class="icon">✅</span>
+        <span class="icon">🟢</span>
         <div><strong>BreadcrumbList on all pages</strong><span>Cleaner, more professional listings in Google results.</span></div>
       </div>
       <div class="schema-item good">
-        <span class="icon">✅</span>
-        <div><strong>FAQPage on product pages</strong><span>FAQ sections become accordion rich results — more SERP real estate.</span></div>
+        <span class="icon">🟢</span>
+        <div><strong>FAQPage on product pages</strong><span>FAQ sections become rich result accordions — more SERP real estate.</span></div>
       </div>
     </div>
   </div>
   <div class="schema-note">
-    <strong>Why it matters:</strong> Schema changes how Veloq looks in results. Richer listings get more clicks, even at the same position.
+    <strong>Why it matters:</strong> Schema changes how Veloq looks in results. Richer listings get more clicks even at the same position — and it costs very little to implement.
   </div>
 </section>
 
-<!-- 5 · COMPETITIVE MOAT -->
+<!-- ══ 5 · MOAT ══ -->
 <section>
-  <div class="title-bar"></div>
+  <div class="topbar"></div>
   <span class="eyebrow">The Strength to Build On</span>
   <h2>No competitor can write<br><span>from where Veloq stands.</span></h2>
   <div class="moat-grid">
@@ -391,7 +478,7 @@
     <div class="moat-card">
       <span class="icon">🌍</span>
       <h3>5 Markets · $1.7B+ Network</h3>
-      <p>Cross-market operational experience no single-market vendor can replicate or write about credibly.</p>
+      <p>Cross-market operational experience no single-market vendor can replicate or write about with any credibility.</p>
     </div>
     <div class="moat-card">
       <span class="icon">⚡</span>
@@ -409,9 +496,9 @@
   </div>
 </section>
 
-<!-- 6 · CLOSE -->
+<!-- ══ 6 · CLOSE ══ -->
 <section>
-  <div class="title-bar"></div>
+  <div class="topbar"></div>
   <span class="eyebrow">The Path Forward</span>
   <h2>Three pages.<br><span>Three keywords. Start there.</span></h2>
   <div class="close-body">
@@ -420,11 +507,11 @@
   <div class="close-cards">
     <div class="close-card">
       <h3>Filipe Lins Duarte</h3>
-      <p>SEO & AEO Consultant<br><a href="mailto:team@aipeekaboo.com">team@aipeekaboo.com</a></p>
+      <p>SEO & AEO Consultant<br><br><a href="mailto:team@aipeekaboo.com">team@aipeekaboo.com</a></p>
     </div>
     <div class="close-card">
       <h3>Powered by AI Peekaboo</h3>
-      <p>Track Veloq across Google, ChatGPT, Claude & Perplexity.<br><a href="https://aipeekaboo.com">aipeekaboo.com</a></p>
+      <p>Track Veloq across Google, ChatGPT, Claude & Perplexity in one dashboard.<br><br><a href="https://aipeekaboo.com">aipeekaboo.com</a></p>
     </div>
   </div>
 </section>
