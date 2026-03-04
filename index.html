@@ -7,143 +7,148 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --g: #10b981; --g2: #059669; --g-light: #d1fae5; --g-border: #a7f3d0;
-  --navy: #0d2137; --navy2: #1a3a52;
-  --bg: #ffffff; --bg2: #f8fafc; --bg3: #f1f5f9;
-  --text: #334155; --muted: #94a3b8; --border: #e2e8f0;
-  --red: #ef4444; --red-bg: #fef2f2; --red-border: #fecaca;
-  --yellow: #f59e0b; --yellow-bg: #fffbeb; --yellow-border: #fde68a;
+  --g:#10b981; --g2:#059669; --g-light:#d1fae5; --g-border:#a7f3d0;
+  --navy:#0d2137; --navy2:#1a3a52;
+  --bg:#fff; --bg2:#f8fafc; --bg3:#f1f5f9;
+  --text:#334155; --muted:#94a3b8; --border:#e2e8f0;
+  --red:#ef4444; --red-bg:#fef2f2; --red-border:#fecaca;
+  --yellow:#f59e0b; --yellow-bg:#fffbeb; --yellow-border:#fde68a;
 }
-.reveal-viewport { background: var(--bg); }
-.reveal .slides { font-family: "Helvetica Neue", -apple-system, sans-serif; color: var(--text); }
-.reveal .slides section { text-align: left; padding: 40px 60px 32px; height: 100%; overflow: hidden; background: var(--bg); }
-.reveal h1, .reveal h2, .reveal h3, .reveal h4 { font-family: "Helvetica Neue", -apple-system, sans-serif; font-weight: 800; letter-spacing: -.025em; text-transform: none; color: var(--navy); line-height: 1.15; margin: 0; }
-.reveal h1 { font-size: 2.5em; }
-.reveal h2 { font-size: 1.7em; margin-bottom: 22px; }
-.reveal h2 span { color: var(--g); }
-.topbar { position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--g), #34d399); }
-.eyebrow { display: inline-flex; align-items: center; font-size: .56em; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--g2); background: var(--g-light); padding: 3px 11px; border-radius: 100px; margin-bottom: 14px; }
-.reveal .progress { color: var(--g); height: 2px; }
-.reveal .slide-number { color: var(--muted); font-size: .5em; background: none; }
-.note { padding: 11px 16px; border-radius: 9px; font-size: .67em; color: var(--text); line-height: 1.65; margin-top: 14px; }
-.note.green  { background: var(--g-light); border: 1px solid var(--g-border); border-left: 4px solid var(--g); }
-.note.red    { background: var(--red-bg); border: 1px solid var(--red-border); border-left: 4px solid var(--red); }
-.note.yellow { background: var(--yellow-bg); border: 1px solid var(--yellow-border); border-left: 4px solid var(--yellow); }
-.note.grey   { background: var(--bg2); border: 1px solid var(--border); border-left: 4px solid var(--muted); }
-.note strong { color: var(--navy); }
-img.fav { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(--border); background: #fff; padding: 1px; flex-shrink: 0; }
+.reveal-viewport { background:#fff; }
+.reveal .slides { font-family:"Helvetica Neue",-apple-system,sans-serif; color:var(--text); }
+.reveal .slides section { text-align:left; padding:38px 58px 30px; height:100%; overflow:hidden; background:#fff; }
+.reveal h1,.reveal h2,.reveal h3,.reveal h4 { font-family:"Helvetica Neue",-apple-system,sans-serif; font-weight:800; letter-spacing:-.025em; text-transform:none; color:var(--navy); line-height:1.15; margin:0; }
+.reveal h1 { font-size:2.6em; }
+.reveal h2 { font-size:1.8em; margin-bottom:20px; }
+.reveal h2 span { color:var(--g); }
+.topbar { position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--g),#34d399); }
+.eyebrow { display:inline-flex; align-items:center; font-size:.6em; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--g2); background:var(--g-light); padding:3px 12px; border-radius:100px; margin-bottom:14px; }
+.reveal .progress { color:var(--g); height:2px; }
+.reveal .slide-number { color:var(--muted); font-size:.5em; background:none; }
+.note { padding:11px 16px; border-radius:9px; font-size:.7em; color:var(--text); line-height:1.65; margin-top:12px; }
+.note.green  { background:var(--g-light); border:1px solid var(--g-border); border-left:4px solid var(--g); }
+.note.red    { background:var(--red-bg); border:1px solid var(--red-border); border-left:4px solid var(--red); }
+.note.grey   { background:var(--bg2); border:1px solid var(--border); border-left:4px solid var(--muted); }
+.note strong { color:var(--navy); }
+img.fav { width:22px; height:22px; border-radius:4px; border:1px solid var(--border); background:#fff; padding:1px; flex-shrink:0; }
 
-/* ═══ SLIDE 1 — TITLE ═══ */
-.title-sub { color: var(--text); font-size: .76em; line-height: 1.7; margin-top: 14px; max-width: 500px; }
-.title-meta { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--border); font-size: .6em; color: var(--muted); }
+/* TITLE */
+.title-sub { color:var(--text); font-size:.8em; line-height:1.7; margin-top:16px; max-width:500px; }
+.title-meta { display:flex; gap:22px; flex-wrap:wrap; margin-top:28px; padding-top:16px; border-top:1px solid var(--border); font-size:.63em; color:var(--muted); }
 
-/* ═══ SLIDE 2 — 200 DECISION-MAKERS ═══ */
-.dm-hero { display: flex; align-items: center; gap: 28px; margin-bottom: 20px; }
-.dm-big { font-size: 5em; font-weight: 900; color: var(--g); line-height: 1; }
-.dm-copy h3 { font-size: 1.1em; color: var(--navy); margin-bottom: 8px; }
-.dm-copy p  { font-size: .72em; color: var(--text); line-height: 1.65; max-width: 520px; }
-.dm-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-.dm-card { padding: 14px 16px; border-radius: 10px; background: var(--bg2); border: 1px solid var(--border); }
-.dm-card .icon { font-size: 1.2em; margin-bottom: 6px; display: block; }
-.dm-card h4 { font-size: .72em; color: var(--navy); margin-bottom: 4px; }
-.dm-card p  { font-size: .63em; color: var(--text); line-height: 1.5; }
+/* ABOUT */
+.about-grid { display:grid; grid-template-columns:220px 1fr; gap:32px; align-items:start; margin-top:8px; }
+.about-photo { width:200px; height:200px; border-radius:16px; object-fit:cover; border:3px solid var(--g-border); background:var(--bg2); display:flex; align-items:center; justify-content:center; font-size:4em; }
+.about-right h3 { font-size:1.1em; color:var(--navy); margin-bottom:4px; }
+.about-right .role { font-size:.72em; color:var(--g2); font-weight:700; margin-bottom:16px; }
+.about-bullets { display:flex; flex-direction:column; gap:9px; margin-top:4px; }
+.about-bullet { display:flex; gap:10px; align-items:flex-start; padding:10px 14px; border-radius:9px; background:var(--bg2); border:1px solid var(--border); font-size:.7em; }
+.about-bullet .icon { font-size:1.2em; flex-shrink:0; }
+.about-bullet strong { color:var(--navy); display:block; margin-bottom:2px; }
+.about-bullet span { color:var(--text); line-height:1.5; }
 
-/* ═══ SLIDE 3 — GAP ═══ */
-.gap-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; margin-bottom: 16px; }
-.gap-card { border-radius: 12px; padding: 16px 12px 12px; text-align: center; border: 1px solid var(--border); background: var(--bg2); }
-.gap-card.veloq { background: var(--red-bg); border-color: var(--red-border); }
-.gap-card .logo { width: 26px; height: 26px; border-radius: 5px; object-fit: contain; margin: 0 auto 7px; display: block; background: #fff; border: 1px solid var(--border); padding: 1px; }
-.gap-card .num  { font-size: 1.8em; font-weight: 900; line-height: 1; color: var(--navy); display: block; margin-bottom: 4px; }
-.gap-card.veloq .num { color: var(--red); }
-.gap-card .name { font-size: .56em; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; font-weight: 700; }
+/* 200 DMs */
+.dm-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:14px; }
+.dm-card { padding:16px 18px; border-radius:12px; background:var(--bg2); border:1px solid var(--border); }
+.dm-card .icon { font-size:1.4em; margin-bottom:8px; display:block; }
+.dm-card h4 { font-size:.78em; color:var(--navy); margin-bottom:6px; }
+.dm-card p  { font-size:.68em; color:var(--text); line-height:1.55; }
 
-/* ═══ SLIDE 4 — SERP ═══ */
-.serp-wrap { display: flex; flex-direction: column; gap: 14px; }
-.kw-label { font-size: .58em; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--navy2); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
-.kw-label::before { content: ''; display: inline-block; width: 3px; height: 13px; background: var(--g); border-radius: 2px; }
-.serp-row { display: grid; grid-template-columns: repeat(5,1fr); gap: 7px; }
-.serp-chip { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 7px 6px; font-size: .61em; color: var(--text); font-weight: 600; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 4px; }
-.serp-chip.absent { background: var(--red-bg); border-color: var(--red-border); color: var(--red); font-weight: 700; }
+/* GAP */
+.gap-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-bottom:16px; }
+.gap-card { border-radius:12px; padding:18px 12px 14px; text-align:center; border:1px solid var(--border); background:var(--bg2); }
+.gap-card.veloq { background:var(--red-bg); border-color:var(--red-border); }
+.gap-card .logo { width:28px; height:28px; border-radius:6px; object-fit:contain; margin:0 auto 8px; display:block; background:#fff; border:1px solid var(--border); padding:1px; }
+.gap-card .num  { font-size:2em; font-weight:900; line-height:1; color:var(--navy); display:block; margin-bottom:5px; }
+.gap-card.veloq .num { color:var(--red); }
+.gap-card .name { font-size:.6em; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
 
-/* ═══ SLIDE 5 — AEO ═══ */
-.aeo-prompt { background: var(--navy); border-radius: 10px; padding: 12px 18px; margin-bottom: 16px; }
-.aeo-prompt .qlabel { font-size: .55em; font-weight: 700; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; }
-.aeo-prompt .qtext  { font-size: .74em; color: #fff; font-style: italic; }
-.aeo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.aeo-answer { padding: 14px 16px; border-radius: 10px; }
-.aeo-answer.bad  { background: var(--red-bg); border: 1px solid var(--red-border); }
-.aeo-answer.good { background: var(--g-light); border: 1px solid var(--g-border); }
-.aeo-answer .alabel { font-size: .57em; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; display: block; }
-.aeo-answer.bad  .alabel { color: var(--red); }
-.aeo-answer.good .alabel { color: var(--g2); }
-.aeo-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.aeo-chip { display: flex; align-items: center; gap: 5px; padding: 4px 9px; border-radius: 100px; font-size: .62em; font-weight: 600; background: #fff; border: 1px solid var(--border); color: var(--navy); }
-.aeo-chip.absent { background: var(--red-bg); border-color: var(--red-border); color: var(--red); font-weight: 700; }
-.aeo-chip.present { background: var(--g-light); border-color: var(--g-border); color: var(--g2); font-weight: 700; }
+/* SERP */
+.serp-wrap { display:flex; flex-direction:column; gap:15px; }
+.kw-label { font-size:.62em; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--navy2); margin-bottom:7px; display:flex; align-items:center; gap:6px; }
+.kw-label::before { content:''; display:inline-block; width:3px; height:13px; background:var(--g); border-radius:2px; }
+.serp-row { display:grid; grid-template-columns:repeat(5,1fr); gap:7px; }
+.serp-chip { background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:8px 6px; font-size:.64em; color:var(--text); font-weight:600; text-align:center; display:flex; flex-direction:column; align-items:center; gap:5px; }
+.serp-chip.absent { background:var(--red-bg); border-color:var(--red-border); color:var(--red); font-weight:700; }
 
-/* ═══ SLIDE 6 — BACKLINKS ═══ */
-.bl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.bl-card { padding: 18px 18px; border-radius: 12px; background: var(--bg2); border: 1px solid var(--border); position: relative; overflow: hidden; }
-.bl-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-.bl-card.rohlik::before { background: #e84643; }
-.bl-card.autostore::before { background: #e8361f; }
-.bl-card .logo-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-.bl-card .logo-row img { width: 24px; height: 24px; border-radius: 5px; }
-.bl-card .logo-row span { font-size: .72em; font-weight: 800; color: var(--navy); }
-.bl-card h4 { font-size: .76em; color: var(--navy); margin-bottom: 6px; }
-.bl-card p  { font-size: .65em; color: var(--text); line-height: 1.55; }
-.bl-card .tag { display: inline-block; margin-top: 10px; font-size: .58em; font-weight: 700; padding: 2px 9px; border-radius: 100px; background: var(--g-light); color: var(--g2); border: 1px solid var(--g-border); }
+/* AEO */
+.aeo-prompt { background:var(--navy); border-radius:10px; padding:13px 20px; margin-bottom:14px; }
+.aeo-prompt .qlabel { font-size:.57em; font-weight:700; color:var(--muted); letter-spacing:.08em; text-transform:uppercase; margin-bottom:5px; }
+.aeo-prompt .qtext  { font-size:.76em; color:#fff; font-style:italic; }
+.aeo-boxes { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+.aeo-box { padding:14px 16px; border-radius:10px; }
+.aeo-box.bad  { background:var(--red-bg); border:1px solid var(--red-border); }
+.aeo-box.good { background:var(--g-light); border:1px solid var(--g-border); }
+.aeo-box .blabel { font-size:.58em; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin-bottom:9px; display:block; }
+.aeo-box.bad  .blabel { color:var(--red); }
+.aeo-box.good .blabel { color:var(--g2); }
+.aeo-chips { display:flex; flex-wrap:wrap; gap:6px; }
+.aeo-chip { display:flex; align-items:center; gap:5px; padding:4px 9px; border-radius:100px; font-size:.63em; font-weight:600; background:#fff; border:1px solid var(--border); color:var(--navy); }
+.aeo-chip.absent { background:var(--red-bg); border-color:var(--red-border); color:var(--red); font-weight:700; }
+.aeo-screenshot { width:100%; border-radius:10px; border:1px solid var(--border); box-shadow:0 4px 20px rgba(0,0,0,.08); display:block; }
 
-/* ═══ SLIDE 7 — CONTENT CLUSTER ═══ */
-.cluster-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; }
-.pillar { padding: 14px 16px; border-radius: 10px; background: var(--navy); color: #fff; }
-.pillar .plabel { font-size: .55em; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--g); margin-bottom: 6px; display: block; }
-.pillar h4 { font-size: .76em; color: #fff; margin-bottom: 6px; }
-.pillar .pkw { font-size: .6em; color: #94a3b8; font-style: italic; margin-bottom: 10px; }
-.support-list { display: flex; flex-direction: column; gap: 7px; }
-.support-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 13px; border-radius: 8px; background: var(--bg2); border: 1px solid var(--border); font-size: .67em; }
-.support-item .sicon { font-size: 1.1em; flex-shrink: 0; }
-.support-item strong { color: var(--navy); display: block; margin-bottom: 1px; }
-.support-item span { color: var(--muted); font-size: .9em; }
-.cluster-note { margin-top: 10px; }
+/* BACKLINKS */
+.bl-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.bl-card { padding:20px 20px; border-radius:12px; background:var(--bg2); border:1px solid var(--border); position:relative; overflow:hidden; }
+.bl-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+.bl-card.rohlik::before { background:#e84643; }
+.bl-card.auto::before { background:#e8361f; }
+.bl-card .logo-row { display:flex; align-items:center; gap:9px; margin-bottom:11px; }
+.bl-card .logo-row img { width:26px; height:26px; border-radius:5px; }
+.bl-card .logo-row span { font-size:.76em; font-weight:800; color:var(--navy); }
+.bl-card h4 { font-size:.78em; color:var(--navy); margin-bottom:7px; }
+.bl-card p  { font-size:.68em; color:var(--text); line-height:1.6; }
+.bl-card .tag { display:inline-block; margin-top:12px; font-size:.6em; font-weight:700; padding:2px 10px; border-radius:100px; background:var(--g-light); color:var(--g2); border:1px solid var(--g-border); }
 
-/* ═══ SLIDE 8 — SCHEMA + QUICK WINS ═══ */
-.qw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.qw-col-title { font-size: .58em; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 10px; display: block; }
-.qw-col-title.bad  { color: var(--red); }
-.qw-col-title.good { color: var(--g2); }
-.qw-item { display: flex; gap: 9px; padding: 9px 12px; border-radius: 9px; margin-bottom: 7px; font-size: .67em; line-height: 1.5; align-items: flex-start; }
-.qw-item.bad  { background: var(--red-bg); border: 1px solid var(--red-border); }
-.qw-item.good { background: var(--g-light); border: 1px solid var(--g-border); }
-.qw-item strong { color: var(--navy); display: block; margin-bottom: 1px; }
-.qw-item span { color: var(--text); font-size: .93em; }
+/* CONTENT CLUSTER */
+.cluster { display:flex; flex-direction:column; gap:10px; margin-top:4px; }
+.cluster-row { display:grid; grid-template-columns:200px 1fr; gap:0; border-radius:12px; overflow:hidden; border:1px solid var(--border); }
+.cluster-pillar { background:var(--navy); padding:16px 16px; display:flex; flex-direction:column; justify-content:center; }
+.cluster-pillar .plabel { font-size:.52em; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--g); margin-bottom:5px; }
+.cluster-pillar h4 { font-size:.72em; color:#fff; line-height:1.3; }
+.cluster-articles { background:var(--bg2); padding:14px 16px; display:flex; flex-direction:column; gap:7px; }
+.cluster-article { display:flex; align-items:flex-start; gap:8px; font-size:.65em; }
+.cluster-article .bullet { width:6px; height:6px; border-radius:50%; background:var(--g); flex-shrink:0; margin-top:5px; }
+.cluster-article strong { color:var(--navy); }
+.cluster-article span { color:var(--muted); }
 
-/* ═══ SLIDE 9 — MOAT ═══ */
-.moat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
-.moat-card { padding: 14px 16px; border-radius: 12px; background: var(--bg2); border: 1px solid var(--border); position: relative; overflow: hidden; }
-.moat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--g), #34d399); }
-.moat-card .icon { font-size: 1.2em; margin-bottom: 6px; display: block; }
-.moat-card h3 { font-size: .74em; color: var(--navy); margin-bottom: 4px; }
-.moat-card p  { font-size: .63em; color: var(--text); line-height: 1.5; }
+/* SCHEMA / QUICK WINS */
+.qw-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.qw-col-title { font-size:.6em; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; display:block; }
+.qw-col-title.bad  { color:var(--red); }
+.qw-col-title.good { color:var(--g2); }
+.qw-item { display:flex; gap:9px; padding:10px 13px; border-radius:9px; margin-bottom:8px; font-size:.69em; line-height:1.5; align-items:flex-start; }
+.qw-item.bad  { background:var(--red-bg); border:1px solid var(--red-border); }
+.qw-item.good { background:var(--g-light); border:1px solid var(--g-border); }
+.qw-item strong { color:var(--navy); display:block; margin-bottom:1px; }
+.qw-item span { color:var(--text); font-size:.93em; }
 
-/* ═══ SLIDE 10 — CLOSE ═══ */
-.close-steps { display: flex; flex-direction: column; gap: 9px; margin: 18px 0; }
-.close-step { display: flex; align-items: flex-start; gap: 12px; padding: 11px 16px; border-radius: 10px; background: var(--bg2); border: 1px solid var(--border); }
-.close-step .badge { flex-shrink: 0; background: var(--navy); color: #fff; border-radius: 6px; padding: 2px 9px; font-size: .58em; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; margin-top: 2px; }
-.close-step h4 { font-size: .74em; color: var(--navy); margin-bottom: 2px; }
-.close-step p  { font-size: .63em; color: var(--text); line-height: 1.5; }
-.close-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.close-card { padding: 16px 20px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg2); }
-.close-card h3 { font-size: .74em; color: var(--navy); margin-bottom: 5px; }
-.close-card p  { font-size: .63em; color: var(--text); line-height: 1.55; }
-.close-card a  { color: var(--g); text-decoration: none; font-weight: 700; }
+/* MOAT */
+.moat-grid { display:grid; grid-template-columns:1fr 1fr; gap:13px; margin-bottom:14px; }
+.moat-card { padding:16px 18px; border-radius:12px; background:var(--bg2); border:1px solid var(--border); position:relative; overflow:hidden; }
+.moat-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--g),#34d399); }
+.moat-card .icon { font-size:1.3em; margin-bottom:7px; display:block; }
+.moat-card h3 { font-size:.76em; color:var(--navy); margin-bottom:5px; }
+.moat-card p  { font-size:.66em; color:var(--text); line-height:1.55; }
+
+/* CLOSE */
+.close-steps { display:flex; flex-direction:column; gap:10px; margin:16px 0; }
+.close-step { display:flex; align-items:flex-start; gap:12px; padding:12px 16px; border-radius:10px; background:var(--bg2); border:1px solid var(--border); }
+.close-step .badge { flex-shrink:0; background:var(--navy); color:#fff; border-radius:6px; padding:3px 10px; font-size:.6em; font-weight:800; letter-spacing:.06em; text-transform:uppercase; margin-top:2px; white-space:nowrap; }
+.close-step h4 { font-size:.76em; color:var(--navy); margin-bottom:3px; }
+.close-step p  { font-size:.66em; color:var(--text); line-height:1.5; }
+.close-cards { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.close-card { padding:18px 20px; border-radius:12px; border:1px solid var(--border); background:var(--bg2); }
+.close-card h3 { font-size:.76em; color:var(--navy); margin-bottom:6px; }
+.close-card p  { font-size:.66em; color:var(--text); line-height:1.6; }
+.close-card a  { color:var(--g); text-decoration:none; font-weight:700; }
 </style>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 
-<!-- ══ 1 · TITLE ══ -->
+<!-- 1 · TITLE -->
 <section>
   <div class="topbar"></div>
   <span class="eyebrow">SEO & AEO Strategy · March 2026</span>
@@ -156,7 +161,40 @@ img.fav { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(-
   </div>
 </section>
 
-<!-- ══ 2 · 200 DECISION-MAKERS ══ -->
+<!-- 2 · ABOUT -->
+<section>
+  <div class="topbar"></div>
+  <span class="eyebrow">Who I Am</span>
+  <h2>Filipe Lins Duarte</h2>
+  <div class="about-grid">
+    <div style="font-size:5em;text-align:center;padding-top:20px;">👤</div>
+    <div>
+      <div class="about-right">
+        <div class="role">SEO & AEO Consultant · Founder of AI Peekaboo</div>
+        <div class="about-bullets">
+          <div class="about-bullet">
+            <span class="icon">🎯</span>
+            <div><strong>Focused on B2B organic growth</strong><span>I work with technology companies that sell to a small, defined audience of senior decision-makers — where every ranking and every AI citation matters.</span></div>
+          </div>
+          <div class="about-bullet">
+            <span class="icon">🤖</span>
+            <div><strong>Founder of AI Peekaboo</strong><span>A platform that tracks brand visibility across Google, ChatGPT, Perplexity, Claude and Gemini. Built because traditional SEO tools don't measure AI search — and AI search is where your buyers increasingly research.</span></div>
+          </div>
+          <div class="about-bullet">
+            <span class="icon">⚡</span>
+            <div><strong>Speed is a first principle</strong><span>I don't believe in 6-month strategy documents before action. Week one is execution. You'll see results — indexed pages, improved rankings, tracked AI citations — before the end of month one.</span></div>
+          </div>
+          <div class="about-bullet">
+            <span class="icon">📊</span>
+            <div><strong>Every recommendation in this deck is backed by real data</strong><span>Screaming Frog crawl of veloq.com and all 4 competitors. Live SERP analysis. Live Perplexity query run this week.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · 200 DECISION-MAKERS -->
 <section>
   <div class="topbar"></div>
   <span class="eyebrow">The Audience</span>
@@ -165,23 +203,23 @@ img.fav { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(-
     <div class="dm-card">
       <span class="icon">🎯</span>
       <h4>A tiny, defined audience</h4>
-      <p>Grocery CPOs, COOs, and heads of ecommerce at large grocery retailers globally. LinkedIn already knows them. So does Google.</p>
+      <p>Grocery CPOs, COOs, and heads of ecommerce at large grocery retailers globally. Every one of them has a name. LinkedIn already knows them.</p>
     </div>
     <div class="dm-card">
       <span class="icon">📉</span>
       <h4>LinkedIn is hitting a wall</h4>
-      <p>~€1,000/week targeting a finite pool of decision-makers. Ad fatigue is real. Organic channels create compounding reach — ads stop when spend stops, content doesn't.</p>
+      <p>~€1,000/week targeting a finite pool. Ad fatigue is real and the audience doesn't grow. Organic channels compound — content keeps working after you stop paying.</p>
     </div>
     <div class="dm-card">
       <span class="icon">🔍</span>
       <h4>These buyers research before buying</h4>
-      <p>A CPO evaluating a €5M automation project will Google it, ask ChatGPT, read case studies. Veloq needs to be present at every stage of that research journey.</p>
+      <p>A CPO evaluating a €5M automation project will Google it, ask ChatGPT, read case studies. Veloq needs to appear at every stage of that journey.</p>
     </div>
   </div>
-  <div class="note green" style="margin-top:14px;"><strong>The shift in thinking:</strong> You're not trying to drive mass traffic. You're trying to ensure every one of those 200 people finds Veloq during their research — wherever they look.</div>
+  <div class="note green"><strong>The strategic shift:</strong> You're not chasing mass traffic. You're making sure every one of those 200 people finds Veloq during research — on Google, on Perplexity, in an industry article.</div>
 </section>
 
-<!-- ══ 3 · CONTENT GAP ══ -->
+<!-- 4 · CONTENT GAP -->
 <section>
   <div class="topbar"></div>
   <span class="eyebrow">The Core Problem</span>
@@ -213,10 +251,10 @@ img.fav { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(-
       <span class="name">AutoStore</span>
     </div>
   </div>
-  <div class="note red"><strong>This is a content volume problem, not a technical one.</strong> Veloq's site is technically clean — no broken pages, no missing titles, no redirect issues. Google just has nothing to rank. Fix the content gap, and everything else follows.</div>
+  <div class="note red"><strong>This is a content volume problem, not a technical one.</strong> The Veloq site is technically clean — no broken pages, no missing metadata, no redirect issues. Google simply has nothing to rank. Fix the content gap and everything else follows.</div>
 </section>
 
-<!-- ══ 4 · SERP ══ -->
+<!-- 5 · SERP -->
 <section>
   <div class="topbar"></div>
   <span class="eyebrow">The Consequence</span>
@@ -255,18 +293,18 @@ img.fav { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(-
   </div>
 </section>
 
-<!-- ══ 5 · AEO ══ -->
+<!-- 6 · AEO -->
 <section>
   <div class="topbar"></div>
-  <span class="eyebrow">The Opportunity You Haven't Considered</span>
+  <span class="eyebrow">The Opportunity You Haven't Considered Yet</span>
   <h2>Veloq's buyers use AI to research.<br><span>Veloq isn't in any answer.</span></h2>
   <div class="aeo-prompt">
     <div class="qlabel">Asked on Perplexity · March 2026</div>
     <div class="qtext">"What are the best grocery warehouse automation platforms for large retailers?"</div>
   </div>
-  <div class="aeo-grid">
-    <div class="aeo-answer bad">
-      <span class="alabel">❌ Who Perplexity named</span>
+  <div class="aeo-boxes">
+    <div class="aeo-box bad">
+      <span class="blabel">❌ Who Perplexity named</span>
       <div class="aeo-chips">
         <div class="aeo-chip"><img class="fav" src="https://www.google.com/s2/favicons?domain=symbotic.com&sz=64" alt="">Symbotic</div>
         <div class="aeo-chip"><img class="fav" src="https://www.google.com/s2/favicons?domain=dematic.com&sz=64" alt="">Dematic</div>
@@ -277,137 +315,106 @@ img.fav { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(-
         <div class="aeo-chip absent">✗ Veloq — absent</div>
       </div>
     </div>
-    <div class="aeo-answer good">
-      <span class="alabel">✅ How to get Veloq cited</span>
-      <div class="aeo-chips" style="flex-direction:column;gap:7px;">
-        <div style="font-size:.68em;color:#065f46;line-height:1.55;">AI models like Perplexity and ChatGPT pull answers from indexed content. The fix is structured content that directly answers the questions buyers are asking — with Veloq's specific operational data.</div>
-        <div style="font-size:.65em;color:#047857;font-weight:700;line-height:1.6;">→ Track AI citations monthly using AI Peekaboo across ChatGPT, Perplexity, Claude & Gemini.</div>
-      </div>
+    <div class="aeo-box good">
+      <span class="blabel">✅ How to get Veloq cited</span>
+      <div style="font-size:.68em;color:#065f46;line-height:1.6;">AI models pull answers from indexed, structured content. Build pages that directly answer the questions buyers ask — using Veloq's real operational data. Track citations monthly with AI Peekaboo across ChatGPT, Perplexity, Claude & Gemini.</div>
     </div>
   </div>
+  <img class="aeo-screenshot" src="perplexity.jpg" alt="Perplexity answer — Veloq absent">
 </section>
 
-<!-- ══ 6 · BACKLINKS ══ -->
+<!-- 7 · BACKLINKS -->
 <section>
   <div class="topbar"></div>
   <span class="eyebrow">Untapped Assets</span>
-  <h2>Veloq already has<br><span>two high-authority backlink sources.</span></h2>
+  <h2>Two high-authority backlinks.<br><span>Both are phone calls, not campaigns.</span></h2>
   <div class="bl-grid">
     <div class="bl-card rohlik">
       <div class="logo-row">
         <img src="https://www.google.com/s2/favicons?domain=rohlik.group&sz=64" alt="Rohlik">
         <span>Rohlik Group</span>
       </div>
-      <h4>The parent company. High domain authority. Zero links to Veloq.</h4>
-      <p>A single editorial link from rohlik.group — "our technology platform", "built on Veloq" — would be one of the most impactful backlinks Veloq could receive. No outreach required. This is a phone call.</p>
+      <h4>The parent company. High domain authority. Zero links to Veloq today.</h4>
+      <p>A single editorial link from rohlik.group — "our technology platform", "built on Veloq" — would be among the highest-impact backlinks Veloq could receive. No outreach required. One internal conversation.</p>
       <span class="tag">⚡ Fastest possible win</span>
     </div>
-    <div class="bl-card autostore">
+    <div class="bl-card auto">
       <div class="logo-row">
         <img src="https://www.google.com/s2/favicons?domain=autostoresystem.com&sz=64" alt="AutoStore">
         <span>AutoStore</span>
       </div>
-      <h4>Named technology partner. Already on Veloq's site.</h4>
-      <p>AutoStore's domain is one of the highest-authority sites in warehouse automation (4,699 indexed pages). A reciprocal link from their partner or case study section would carry significant weight.</p>
+      <h4>Named technology partner. Already on Veloq's site. 4,699 indexed pages.</h4>
+      <p>AutoStore's domain is one of the highest-authority sites in warehouse automation globally. A reciprocal link from their partner or case study section would carry significant weight.</p>
       <span class="tag">📞 One conversation away</span>
     </div>
   </div>
-  <div class="note grey" style="margin-top:14px;"><strong>Beyond that:</strong> Industry publications (Grocery Dive, The Grocer, Supply Chain Dive) actively look for operator-level content. A single published piece with a backlink compounds over time.</div>
+  <div class="note grey"><strong>Beyond that:</strong> Grocery Dive, The Grocer, and Supply Chain Dive actively look for operator-level content. A single published piece with a backlink compounds over time — and positions Veloq as a thought leader, not just a vendor.</div>
 </section>
 
-<!-- ══ 7 · CONTENT CLUSTER ══ -->
+<!-- 8 · CONTENT CLUSTER -->
 <section>
   <div class="topbar"></div>
   <span class="eyebrow">Content Roadmap</span>
-  <h2>Not "write more content."<br><span>A structured topic cluster.</span></h2>
-  <div class="cluster-grid">
-    <div>
-      <div class="pillar" style="margin-bottom:10px;">
-        <span class="plabel">Pillar Page 1</span>
+  <h2>Three topic clusters.<br><span>Each one built to rank and convert.</span></h2>
+  <div class="cluster">
+    <div class="cluster-row">
+      <div class="cluster-pillar">
+        <div class="plabel">Cluster 1</div>
         <h4>Grocery Warehouse Automation</h4>
-        <div class="pkw">"grocery warehouse automation software"</div>
       </div>
-      <div class="pillar" style="margin-bottom:10px;">
-        <span class="plabel">Pillar Page 2</span>
-        <h4>Grocery Fulfilment Centres</h4>
-        <div class="pkw">"grocery fulfilment centres"</div>
-      </div>
-      <div class="pillar">
-        <span class="plabel">Pillar Page 3</span>
-        <h4>eGrocery Automation</h4>
-        <div class="pkw">"grocery warehouse automation"</div>
+      <div class="cluster-articles">
+        <div class="cluster-article"><div class="bullet"></div><div><strong>MFC vs Central FC: A Grocery Operator's Guide</strong> <span>— The #1 question buyers Google before evaluating vendors. Veloq has the live data to make this definitive.</span></div></div>
+        <div class="cluster-article"><div class="bullet"></div><div><strong>Grocery Fulfillment Cost-Per-Order Benchmarks</strong> <span>— Only an operator can publish this. Earns backlinks and ranks for high-intent research queries.</span></div></div>
       </div>
     </div>
-    <div class="support-list">
-      <div class="support-item">
-        <span class="sicon">📝</span>
-        <div><strong>MFC vs Central FC: A Grocery Operator's Guide</strong><span>Answers the #1 question buyers Google before evaluating vendors. Veloq has the data to make this definitive.</span></div>
+    <div class="cluster-row">
+      <div class="cluster-pillar">
+        <div class="plabel">Cluster 2</div>
+        <h4>Grocery Fulfilment Centres</h4>
       </div>
-      <div class="support-item">
-        <span class="sicon">📊</span>
-        <div><strong>Grocery Fulfillment Cost-Per-Order Benchmarks</strong><span>A data piece only an operator can publish. Ranks for high-intent research queries. Earns backlinks.</span></div>
+      <div class="cluster-articles">
+        <div class="cluster-article"><div class="bullet"></div><div><strong>How to Deploy a Grocery FC in Under 8 Months</strong> <span>— Turns Veloq's fastest deployment claim into a long-form proof piece buyers share with their board.</span></div></div>
+        <div class="cluster-article"><div class="bullet"></div><div><strong>Side-of-Store vs Dark Store: Which Model Wins?</strong> <span>— Veloq already ranks #1 for "side of store fulfillment." Expand this into a full comparison guide.</span></div></div>
       </div>
-      <div class="support-item">
-        <span class="sicon">⚡</span>
-        <div><strong>How to Deploy a Grocery FC in Under 8 Months</strong><span>Turns Veloq's fastest deployment claim into a long-form proof piece that buyers share internally.</span></div>
+    </div>
+    <div class="cluster-row">
+      <div class="cluster-pillar">
+        <div class="plabel">Cluster 3</div>
+        <h4>Alternatives & Comparisons</h4>
       </div>
-      <div class="support-item">
-        <span class="sicon">🔄</span>
-        <div><strong>Alternatives to Ocado Smart Platform</strong><span>Zero automation vendors rank for this. Bloomberg just reported OSP is struggling. The timing is perfect.</span></div>
+      <div class="cluster-articles">
+        <div class="cluster-article"><div class="bullet"></div><div><strong>Alternatives to Ocado Smart Platform</strong> <span>— Zero automation vendors rank for this term. Bloomberg just reported OSP is struggling. The timing is now.</span></div></div>
+        <div class="cluster-article"><div class="bullet"></div><div><strong>What to Look for in a Grocery Automation Vendor</strong> <span>— High-intent buyer guide that Veloq can write from the operator perspective. AI models love this format.</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 8 · SCHEMA + QUICK WINS ══ -->
+<!-- 9 · SCHEMA + QUICK WINS -->
 <section>
   <div class="topbar"></div>
   <span class="eyebrow">Technical Quick Wins</span>
   <h2>Small fixes.<br><span>Immediate SERP impact.</span></h2>
   <div class="qw-grid">
     <div>
-      <span class="qw-col-title bad">❌ What's there now</span>
-      <div class="qw-item bad">
-        <span>🔴</span>
-        <div><strong>WebPage schema on every product page</strong><span>Most basic type — tells Google nothing about what Veloq sells.</span></div>
-      </div>
-      <div class="qw-item bad">
-        <span>🔴</span>
-        <div><strong>No BreadcrumbList</strong><span>Google can't show clean URL paths in search results.</span></div>
-      </div>
-      <div class="qw-item bad">
-        <span>🔴</span>
-        <div><strong>No FAQPage schema</strong><span>Missing accordion rich results in SERPs.</span></div>
-      </div>
-      <div class="qw-item bad">
-        <span>🔴</span>
-        <div><strong>2 title tags over 70 characters</strong><span>Get truncated in Google — reduced click-through.</span></div>
-      </div>
+      <span class="qw-col-title bad">❌ Current state</span>
+      <div class="qw-item bad"><span>🔴</span><div><strong>WebPage schema on every product page</strong><span>Most basic type — tells Google nothing about what Veloq sells or how it works.</span></div></div>
+      <div class="qw-item bad"><span>🔴</span><div><strong>No BreadcrumbList</strong><span>Google can't show clean URL paths in search results.</span></div></div>
+      <div class="qw-item bad"><span>🔴</span><div><strong>No FAQPage schema</strong><span>Missing accordion-style rich results — less SERP real estate.</span></div></div>
+      <div class="qw-item bad"><span>🔴</span><div><strong>2 title tags over 70 characters</strong><span>Get truncated in Google — lower click-through rates.</span></div></div>
     </div>
     <div>
       <span class="qw-col-title good">✅ Easy fixes</span>
-      <div class="qw-item good">
-        <span>🟢</span>
-        <div><strong>SoftwareApplication schema</strong><span>Declares Veloq as a B2B platform — category, features, pricing signals.</span></div>
-      </div>
-      <div class="qw-item good">
-        <span>🟢</span>
-        <div><strong>BreadcrumbList on all pages</strong><span>Cleaner, more professional listings in Google results.</span></div>
-      </div>
-      <div class="qw-item good">
-        <span>🟢</span>
-        <div><strong>FAQPage on solution pages</strong><span>FAQ sections become rich result accordions — more SERP real estate.</span></div>
-      </div>
-      <div class="qw-item good">
-        <span>🟢</span>
-        <div><strong>Fix truncated titles</strong><span>2 pages need titles shortened to under 60 characters.</span></div>
-      </div>
+      <div class="qw-item good"><span>🟢</span><div><strong>SoftwareApplication schema</strong><span>Declares Veloq as a B2B platform — category, features, pricing signals for Google.</span></div></div>
+      <div class="qw-item good"><span>🟢</span><div><strong>BreadcrumbList on all pages</strong><span>Cleaner, more professional listings in Google results.</span></div></div>
+      <div class="qw-item good"><span>🟢</span><div><strong>FAQPage on solution pages</strong><span>FAQ sections become rich result accordions — more visibility at same ranking.</span></div></div>
+      <div class="qw-item good"><span>🟢</span><div><strong>Fix 2 truncated titles</strong><span>Short titles under 60 characters — full display in search results.</span></div></div>
     </div>
   </div>
-  <div class="note green" style="margin-top:12px;"><strong>Implementation time: ~1 day.</strong> Schema and title fixes are developer-level changes — low effort, measurable improvement in click-through rate within weeks.</div>
+  <div class="note green"><strong>Implementation time: ~1 day.</strong> These are developer-level changes. Low effort, measurable improvement in click-through rate within weeks of deployment.</div>
 </section>
 
-<!-- ══ 9 · MOAT ══ -->
+<!-- 10 · MOAT -->
 <section>
   <div class="topbar"></div>
   <span class="eyebrow">The Competitive Advantage</span>
@@ -416,12 +423,12 @@ img.fav { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(-
     <div class="moat-card">
       <span class="icon">🏭</span>
       <h3>12 Live Fulfillment Centers</h3>
-      <p>Real pick rates, real cost-per-order, real deployment data. Competitors publish theory. Veloq can publish facts — and Google rewards specificity.</p>
+      <p>Real pick rates, real cost-per-order, real deployment data. Competitors publish theory. Veloq publishes facts — and Google rewards specificity.</p>
     </div>
     <div class="moat-card">
       <span class="icon">🌍</span>
       <h3>5 Markets · $1.7B+ Network</h3>
-      <p>Cross-market operational experience no single-market vendor can replicate. This is SEO moat — nobody else can write this content credibly.</p>
+      <p>Cross-market operational experience no single-market vendor can replicate or write about credibly. This is an SEO moat.</p>
     </div>
     <div class="moat-card">
       <span class="icon">⚡</span>
@@ -434,10 +441,10 @@ img.fav { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(-
       <p>Built inside Europe's fastest-growing eGrocer to solve a real problem. That origin story is the content strategy — nobody else has it.</p>
     </div>
   </div>
-  <div class="note green"><strong>The SEO strategy in one sentence:</strong> Get Veloq's operational knowledge online. Google and AI models reward the most specific, authoritative, operator-level content in any space — and only Veloq can produce it here.</div>
+  <div class="note green"><strong>In one sentence:</strong> Get Veloq's operational knowledge online. Google and AI models reward the most specific, authoritative content in any space — and only Veloq can produce it here.</div>
 </section>
 
-<!-- ══ 10 · CLOSE ══ -->
+<!-- 11 · CLOSE -->
 <section>
   <div class="topbar"></div>
   <span class="eyebrow">The Path Forward</span>
@@ -445,25 +452,25 @@ img.fav { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(-
   <div class="close-steps">
     <div class="close-step">
       <div class="badge">Week 1–2</div>
-      <div><h4>Technical fixes + baseline</h4><p>Fix schema, title tags. Set up GSC, GA4. Baseline AI Peekaboo tracking across 10 target prompts.</p></div>
+      <div><h4>Technical fixes + baseline tracking</h4><p>Fix schema and title tags. Set up GSC, GA4. Baseline AI Peekaboo across 10 target prompts. Request Rohlik Group and AutoStore backlinks.</p></div>
     </div>
     <div class="close-step">
       <div class="badge">Week 2–3</div>
-      <div><h4>Three pillar pages live</h4><p>Dedicated page per keyword. Rohlik Group and AutoStore backlinks requested.</p></div>
+      <div><h4>Three pillar pages live</h4><p>Dedicated landing page per target keyword — built and published. Each page targets one cluster and links to supporting content.</p></div>
     </div>
     <div class="close-step">
       <div class="badge">Month 1–2</div>
-      <div><h4>First content published + pitched</h4><p>MFC vs CFC guide + cost-per-order benchmark. Both pitched to Grocery Dive and Supply Chain Dive for backlinks.</p></div>
+      <div><h4>First content published and pitched to press</h4><p>MFC vs CFC guide + cost-per-order benchmark. Both pitched to Grocery Dive and Supply Chain Dive for editorial coverage and backlinks.</p></div>
     </div>
   </div>
   <div class="close-cards">
     <div class="close-card">
       <h3>Filipe Lins Duarte — SEO & AEO Consultant</h3>
-      <p>Proposed: <strong style="color:var(--navy)">€2,000–2,500/month</strong><br><a href="mailto:team@aipeekaboo.com">team@aipeekaboo.com</a></p>
+      <p>Proposed: <strong style="color:var(--navy)">€2,000–2,500 / month</strong><br><br><a href="mailto:team@aipeekaboo.com">team@aipeekaboo.com</a></p>
     </div>
     <div class="close-card">
       <h3>Powered by AI Peekaboo</h3>
-      <p>Track Veloq across Google, ChatGPT, Claude & Perplexity in one dashboard.<br><a href="https://aipeekaboo.com">aipeekaboo.com</a></p>
+      <p>Track Veloq across Google, ChatGPT, Claude & Perplexity in one dashboard.<br><br><a href="https://aipeekaboo.com">aipeekaboo.com</a></p>
     </div>
   </div>
 </section>
@@ -473,9 +480,9 @@ img.fav { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
 <script>
 Reveal.initialize({
-  hash: true, slideNumber: 'c/t', progress: true, controls: true, center: true,
-  transition: 'fade', transitionSpeed: 'fast',
-  width: 1200, height: 675, margin: 0.04, minScale: 0.2, maxScale: 2.0,
+  hash:true, slideNumber:'c/t', progress:true, controls:true, center:true,
+  transition:'fade', transitionSpeed:'fast',
+  width:1200, height:675, margin:0.04, minScale:0.2, maxScale:2.0,
 });
 </script>
 </body>
